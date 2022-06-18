@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Teste</title>
+</head>
+<body>
+
+	<form method="post" action="/home/formulario/salvar" th:object="${jogo}" enctype="multipart/form-data">
+	
+	<input type="hidden" th:field="*{codigo}" />
+	
+	Nome: <input type="text" th:field="*{nome}"/><br>
+	Desenvolvedor: <input type="text" th:field="*{desenvolvedor}"/><br>
+	Gênero: <input type="text" th:field="*{genero}"/><br>
+	Data de Laçameto: <input type="date" th:field="*{dataLancamento}"><br>
+	Capa: <input type="file" name="imagem"> <br>
+	
+	<input type="submit" value="Cadastrar"/>
+	</form>
+	
+	<form method="get" action="/home">
+	<input type="submit" value="Voltar ao Inicio"/>
+	</form>	
+
+</body>
+
+</html>
